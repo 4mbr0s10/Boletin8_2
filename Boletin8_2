@@ -1,0 +1,67 @@
+
+package boletin8.pkg2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin82 {
+
+  
+    public static void main(String[] args)throws IOException {
+        
+        BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
+        final float PI=3.14f;
+        int o=0;
+        System.out.println("1- Cadrado \n"
+                + "2- Triángulo \n"
+                + "3- Círculo");
+        o=Integer.parseInt(br.readLine());
+        if(o<=3 && o > 0){ 
+        switch(o){
+          
+            
+        
+            case 1:
+                System.out.println("Introduzca la longitud de lado del cuadrado");
+                int l=Integer.parseInt(br.readLine());
+                int areaCad=l*l;
+                System.out.println("El área del cuadrado es: "+areaCad);
+            break;
+            
+            case 2:
+                System.out.println("Introduzca la longitud de la base del triangulo: ");
+                int b=Integer.parseInt(br.readLine());
+                System.out.println("Introduzca la longitud de la altura del triangulo: ");
+                int h=Integer.parseInt(br.readLine());
+                int areaTri=(b*h)/2;
+                System.out.println("El área del triángulo es: "+areaTri);
+            break;
+            
+            case 3:
+                System.out.println("Introduzca el radio del circulo: ");
+                int r=Integer.parseInt(br.readLine());
+                int pot=(int)Math.pow(r, 2);
+                float areaCir=PI*pot;
+                System.out.println("El área del círculo es: "+areaCir);
+                
+                break;
+ 
+              
+              
+              
+              }
+        }else{
+            System.out.println("La opcion no es correcta.");
+            
+            
+        }
+        
+    
+    }
+    
+}
